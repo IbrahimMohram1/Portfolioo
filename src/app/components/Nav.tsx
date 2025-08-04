@@ -21,7 +21,7 @@ function Nav() {
   return (
     <>
       <main className="   box border border-zinc-500 rounded-2xl p-5  ">
-        <div className=" flex lg:flex-col flex-row lg:justify-around items-center m-2 ">
+        <div className=" flex   flex-col  lg:justify-around items-center m-2 ">
           <div className="  bg-1 rounded-2xl mr-5 flex justify-center items-center  ">
           {
             showWelcome ? (
@@ -55,14 +55,14 @@ function Nav() {
             <div className="my-2">
               <h1>Ibrahim Mohram </h1>
             </div>
-            <div className="bg-1 rounded-md p-2 text-[12px] text-center">
+            <div className="bg-1 rounded-md  text-[12px] text-center">
               <p>Frontend Develpoer</p>
             </div>
           </div>
         </div>
-
-        <div className="flex-col max-w-full  lg:flex ">
           <hr></hr>
+
+        <div className="flex-col w-3/4 mx-auto max-w-full  lg:flex ">
 
           <div className="flex my-2  ">
             <div className="m-2 box text-yellow-300  rounded-md  p-3 text-center  border border-1 dark:border-white border-black">
