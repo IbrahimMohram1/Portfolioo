@@ -29,7 +29,7 @@ function Nav() {
           </div>
         </div>
 
-        <div className="lg:flex-col max-w-full hidden lg:flex ">
+        <div className="flex-col max-w-full  lg:flex ">
           <hr></hr>
 
           <div className="flex my-2  ">
