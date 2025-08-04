@@ -8,8 +8,8 @@ function NavBar() {
 
   return (
     <>
-      <div className=" flex justify-end ">
-        <nav className=" border border-gray-600 rounded-bl-3xl rounded-tr-3xl rounded-sm   bg-1  lg:w-[50%] w-full ">
+      <div className=" flex justify-start w-full ">
+        <nav className=" border border-gray-600 rounded-bl-3xl rounded-tr-3xl rounded-sm   bg-1   w-full ">
           <div className="flex "></div>
           <div className="" id="navbar-sticky">
             <ul className="flex p-4  font-medium items-center justify-around flex-row">
