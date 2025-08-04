@@ -20,14 +20,15 @@ function NavBar() {
               </li>
 
               <li>
-                <a href={"/resume"} className="  dark:text-white text-black  ">
+                 <Link href={"/resume"} className="  dark:text-white text-black " aria-current="page">
                   Resume
-                </a>
+                </Link>
+               
               </li>
               <li>
-                <a href="/portfolio" className="  dark:text-white  text-black">
+                 <Link href={"/portfolio"} className="  dark:text-white text-black " aria-current="page">
                   Portfolio
-                </a>
+                </Link>
               </li>
               <li>
                 <ToogleMode/>
