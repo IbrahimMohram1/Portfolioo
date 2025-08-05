@@ -53,7 +53,7 @@ function About() {
             <h2 className="capitalize  text-3xl font-bold">What i'm doing</h2>
           </div>
           <div className="  grid lg:grid-cols-2 gap-2 lg:grid-rows-2 grid-cols-1 mb-8 ">
-            <div className="   rounded-md bg-1 ">
+            <div className="   rounded-md bg-1 shadow-[0px_4px_12px_rgba(0,0,0,0.3)]  ">
               <div className="p-3 flex items-center">
                 <div className="w-[10%]">
                   <SiMaterialdesign className="text-3xl w-full text-yellow-400" />
@@ -68,7 +68,7 @@ function About() {
                 </div>
               </div>
             </div>
-            <div className="   rounded-md bg-1 ">
+            <div className="   rounded-md bg-1 shadow-[0px_4px_12px_rgba(0,0,0,0.3)]">
               <div className="p-3 flex items-center">
                 <div className="w-[10%]">
                   <SiMaterialdesign className="text-3xl w-full text-yellow-400" />
@@ -83,7 +83,7 @@ function About() {
               </div>
             </div>
 
-            <div className="   rounded-md bg-1 ">
+            <div className="   rounded-md bg-1 shadow-[0px_4px_12px_rgba(0,0,0,0.3)] ">
               <div className="p-3 flex items-center">
                 <div className="w-[10%]">
                   <SiMaterialdesign className="text-3xl w-full text-yellow-400" />
@@ -98,7 +98,7 @@ function About() {
               </div>
             </div>
 
-            <div className="   rounded-md bg-1 ">
+            <div className="   rounded-md bg-1 shadow-[0px_4px_12px_rgba(0,0,0,0.3)] ">
               <div className="p-3 flex items-center">
                 <div className="w-[10%]">
                   <SiMaterialdesign className="text-3xl w-full text-yellow-400" />

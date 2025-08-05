@@ -65,7 +65,7 @@ function Nav() {
         <div className="flex-col w-3/4 mx-auto max-w-full  lg:flex ">
 
           <div className="flex my-2  ">
-            <div className="m-2 box text-yellow-300  rounded-md  p-3 text-center  border border-1 dark:border-white border-black">
+            <div className="m-2 box dark:text-yellow-300 text-black  rounded-md  p-3 text-center  border border-1 dark:border-white border-black">
               <MdEmail />
             </div>
             <div className="">
@@ -76,7 +76,7 @@ function Nav() {
             </div>
           </div>
           <div className="flex my-2  ">
-            <div className="m-2 box text-yellow-300  rounded-md  p-3 text-center  border border-1 dark:border-white border-black">
+            <div className="m-2 box dark:text-yellow-300 text-black  rounded-md  p-3 text-center  border border-1 dark:border-white border-black">
               <MdPhone />
             </div>
             <div className="">
@@ -85,7 +85,7 @@ function Nav() {
             </div>
           </div>
           <div className="flex my-2  ">
-            <div className="m-2 box text-yellow-300  rounded-md  p-3 text-center border border-1 dark:border-white border-black">
+            <div className="m-2 box dark:text-yellow-300 text-black   rounded-md  p-3 text-center border border-1 dark:border-white border-black">
               <MdLocationCity />
             </div>
             <div className="">
@@ -93,7 +93,7 @@ function Nav() {
               <p className="lg:text-[12px] text-[12px]">Cairo , Egypt</p>
             </div>
           </div>
-          <div className="flex m-2 lg:justify-center gap-5 lg:items-center text-xl">
+          <div className="flex m-2 justify-start gap-5  text-xl">
             <a href="https://x.com/IbrahimMohram3" target="_blank"> 
             <FaTwitter />
             </a>
