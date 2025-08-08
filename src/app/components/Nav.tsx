@@ -8,8 +8,16 @@ import { FaLinkedin } from "react-icons/fa6";
 import { DiGithub } from "react-icons/di";
 import { useEffect, useState } from "react";
 import Lottie from "lottie-react";
+import { delay, motion } from "framer-motion";
+
 function Nav() {
     const [showWelcome, setShowWelcome] = useState(true);
+ const slideLeft = {
+  initial: { x: -100, opacity: 0 },
+  animate: { x: 0, opacity: 1 },
+  transition: { duration: 0.8 , delay:0.5 }
+};
+
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -20,7 +28,10 @@ function Nav() {
   }, []);
   return (
     <>
-      <main className="   box border border-zinc-500 rounded-2xl p-5  ">
+    <motion.main {...slideLeft} className="box border border-zinc-500 rounded-2xl p-5 "
+    
+    >
+
         <div className=" flex   flex-col  lg:justify-around items-center m-2 ">
           <div className="  bg-1 rounded-2xl mr-5 flex justify-center items-center  ">
           {
@@ -61,6 +72,7 @@ function Nav() {
           </div>
         </div>
           <hr></hr>
+
 
         <div className="flex-col w-3/4 mx-auto max-w-full  lg:flex ">
 
@@ -105,7 +117,9 @@ function Nav() {
             </a>
           </div>
         </div>
-      </main>
+
+            </motion.main>
+
     </>
   );
 }

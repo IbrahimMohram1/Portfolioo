@@ -1,11 +1,7 @@
 import { use } from "react";
 
-type ProjectType = {
-  id: number;
-  name: string;
-  link: string;
-  image: string;
-};
+import type { ProjectType } from "../types";
+import PortfolioList from "../components/PortfolioList";
 
 const projects: Omit<ProjectType, "image">[] = [
   { id: 11, name: "Movies", link: "https://movies-74xg.vercel.app/" },
@@ -67,27 +63,6 @@ export default function PortfolioPage() {
   const data = use(fetchScreenshots());
 
   return (
-    <div className="flex flex-wrap justify-center items-start my-3 px-4">
-      {data.map((project) => (
-        <a
-          href={project.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          key={project.id}
-          className="w-full md:w-1/3 p-2 h-full rounded-lg"
-        >
-          <div className="h-full  rounded-md p-2">
-            <img
-              src={project.image}
-              alt={project.name}
-              className=" w-full h-full object-contain rounded-md"
-            />
-            <h2 className="text-base font-semibold capitalize  mt-2">
-              {project.name}
-            </h2>
-          </div>
-        </a>
-      ))}
-    </div>
+  <PortfolioList data={data}/>
   );
 }
