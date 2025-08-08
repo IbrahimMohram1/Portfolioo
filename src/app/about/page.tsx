@@ -5,29 +5,24 @@ import { delay, motion } from "framer-motion";
 function About() {
 const slideLeft={
       initial: { x: 100, opacity: 0 },
-  animate: { x: 0, opacity: 1 },
-    whileInView:{ x: 0, opacity: 1 },
   viewport:{ once: true },
-
+      whileInView:{ x: 0, opacity: 1 },
   transition:{ duration: 0.8 , delay:0.2 }
 }
 const slideRight={
       initial: { x: -100, opacity: 0 },
-  animate: { x: 0, opacity: 1 },
-    whileInView:{ x: 0, opacity: 1 },
+      whileInView:{ x: 0, opacity: 1 },
   viewport:{ once: true },
   transition:{ duration: 0.8  , delay:0.2 }
 }
 const slideDown={
       initial: { y: -100, opacity: 0 },
-  animate: { y: 0, opacity: 1 },
     whileInView:{ y: 0, opacity: 1 },
   viewport:{ once: true },
   transition:{ duration: 0.8, delay:0.2 }
 }
 const slideUp={
       initial: { y: 100, opacity: 0 },
-  animate: { y: 0, opacity: 1 },
     whileInView:{ y: 0, opacity: 1 },
   viewport:{ once: true },
   transition:{ duration: 0.8, delay:0.2 }
@@ -80,7 +75,7 @@ const slideUp={
                  
               </ul>
             </div>
-    <motion.p {...slideDown}>
+    <motion.p {...slideDown} >
    I’ve helped brands and teams translate their vision into modern
               web interfaces that users enjoy — and remember.
               <br />

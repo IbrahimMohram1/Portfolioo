@@ -6,13 +6,13 @@ import Loading from './Loading'
 
 export default function PortfolioList({ data }: { data: ProjectType[] }) {
 const animations = [
-    { initial: { y: -100, opacity: 0 }, animate: { y: 0, opacity: 1 } ,   transition:{ duration: 0.8 } ,    whileInView:{ x: 0, opacity: 1 },
+    { initial: { y: -100, opacity: 0 },    transition:{ duration: 0.8 } ,    whileInView:{ y: 0, opacity: 1 },
   viewport:{ once: true },}, 
-    { initial: { x: 100, opacity: 0 }, animate: { x: 0, opacity: 1 } ,   transition:{ duration: 1 } ,    whileInView:{ x: 0, opacity: 1 },
+    { initial: { x: 100, opacity: 0 },    transition:{ duration: 1 } ,    whileInView:{ x: 0, opacity: 1 },
   viewport:{ once: true },},  
-    { initial: { x: -100, opacity: 0 }, animate: { x: 0, opacity: 1 } ,   transition:{ duration: 0.5 } ,    whileInView:{ x: 0, opacity: 1 },
+    { initial: { x: -100, opacity: 0 },    transition:{ duration: 0.5 } ,    whileInView:{ x: 0, opacity: 1 },
   viewport:{ once: true },}, 
-      { initial: { y: 100, opacity: 0 }, animate: { y: 0, opacity: 1 } ,   transition:{ duration: 0.8 } ,    whileInView:{ x: 0, opacity: 1 },
+      { initial: { y: 100, opacity: 0 },    transition:{ duration: 0.8 } ,    whileInView:{ y: 0, opacity: 1 },
   viewport:{ once: true },},
   ];
   const [loading, setLoading] = useState(true);
@@ -38,7 +38,7 @@ return (
             key={project.id}
             className="w-full md:w-1/3 p-2 h-full rounded-lg"
             initial={anim.initial}
-            whileInView={anim.animate}
+            whileInView={anim.whileInView}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}>
   <div className="h-full  rounded-md p-2">
