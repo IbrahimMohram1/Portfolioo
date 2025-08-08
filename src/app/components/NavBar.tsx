@@ -2,12 +2,19 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ToogleMode from "../ToogleMode/ToogleMode";
+import { delay, motion } from "framer-motion";
 
 function NavBar() {
   const pathname = usePathname();
-
+ const slideDown = {
+  initial: { y: -100, opacity: 0 },
+  animate: { y: 0, opacity: 1 },
+  transition: { duration: 0.8 , delay:0.3 }
+};
   return (
     <>
+    <motion.div {...slideDown}>
+
       <div className=" flex justify-start w-full ">
         <nav className=" border border-gray-600 rounded-bl-3xl rounded-tr-3xl rounded-sm   bg-1   w-full ">
           <div className="flex "></div>
@@ -37,6 +44,8 @@ function NavBar() {
           </div>
         </nav>
       </div>
+          </motion.div>
+
     </>
   );
 }

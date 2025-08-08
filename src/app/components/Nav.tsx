@@ -18,6 +18,21 @@ function Nav() {
   transition: { duration: 0.8 , delay:0.5 }
 };
 
+ const slideRight = {
+  initial: { x: 100, opacity: 0 },
+  animate: { x: 0, opacity: 1 },
+  transition: { duration: 0.8 , delay:0.5 }
+};
+ const slideUp = {
+  initial: { y: 100, opacity: 0 },
+  animate: { y: 0, opacity: 1 },
+  transition: { duration: 0.8 , delay:0.5 }
+};
+ const slideDown = {
+  initial: { y: -100, opacity: 0 },
+  animate: { y: 0, opacity: 1 },
+  transition: { duration: 0.8 , delay:0.5 }
+};
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -28,12 +43,14 @@ function Nav() {
   }, []);
   return (
     <>
-    <motion.main {...slideLeft} className="box border border-zinc-500 rounded-2xl p-5 "
-    
-    >
+    <div className="box border border-zinc-500 rounded-2xl p-5 ">
+
+ 
 
         <div className=" flex   flex-col  lg:justify-around items-center m-2 ">
-          <div className="  bg-1 rounded-2xl mr-5 flex justify-center items-center  ">
+              <motion.div {...slideLeft} className="  bg-1 rounded-2xl mr-5 flex justify-center items-center  ">
+
+          <div >
           {
             showWelcome ? (
               <div className="  ">
@@ -62,21 +79,29 @@ function Nav() {
           }
             
           </div>
+              </motion.div>
+
           <div className="">
-            <div className="my-2">
+            <motion.div {...slideDown} className="my-2">
               <h1>Ibrahim Mohram </h1>
-            </div>
-            <div className="bg-1 rounded-md  text-[12px] text-center">
+
+            </motion.div>
+            <motion.div {...slideRight}  className="bg-1 rounded-md  text-[12px] text-center">
               <p>Frontend Develpoer</p>
+
+            </motion.div>
+            <div >
             </div>
           </div>
         </div>
-          <hr></hr>
+        <motion.hr {...slideDown}>
+
+        </motion.hr>
 
 
         <div className="flex-col w-3/4 mx-auto max-w-full  lg:flex ">
-
-          <div className="flex my-2  ">
+          <motion.div {...slideUp}>
+  <div className="flex my-2  ">
             <div className="m-2 box dark:text-yellow-300 text-black  rounded-md  p-3 text-center  border border-1 dark:border-white border-black">
               <MdEmail />
             </div>
@@ -87,7 +112,9 @@ function Nav() {
               </p>
             </div>
           </div>
-          <div className="flex my-2  ">
+          </motion.div>
+        <motion.div {...slideRight}>
+     <div className="flex my-2  ">
             <div className="m-2 box dark:text-yellow-300 text-black  rounded-md  p-3 text-center  border border-1 dark:border-white border-black">
               <MdPhone />
             </div>
@@ -96,7 +123,10 @@ function Nav() {
               <p className="lg:text-[12px] text-[12px]">01020181248</p>
             </div>
           </div>
-          <div className="flex my-2  ">
+        </motion.div>
+     
+             <motion.div {...slideDown}>
+            <div className="flex my-2  ">
             <div className="m-2 box dark:text-yellow-300 text-black   rounded-md  p-3 text-center border border-1 dark:border-white border-black">
               <MdLocationCity />
             </div>
@@ -105,6 +135,9 @@ function Nav() {
               <p className="lg:text-[12px] text-[12px]">Cairo , Egypt</p>
             </div>
           </div>
+        </motion.div>
+        
+             <motion.div {...slideLeft}>
           <div className="flex m-2 justify-start gap-5  text-xl">
             <a href="https://x.com/IbrahimMohram3" target="_blank"> 
             <FaTwitter />
@@ -116,9 +149,11 @@ function Nav() {
             <FaGithub  />
             </a>
           </div>
+        </motion.div>
+          
         </div>
 
-            </motion.main>
+    </div>
 
     </>
   );

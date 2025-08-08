@@ -32,7 +32,10 @@ const slideUp={
       <div className="">
         <div className=" flex gap-y-4 flex-col">
           <div className="capitalize  md:text-4xl text-xl font-bold flex flex-col relative  top-4  w-1/3">
-            <h1 className="pb-4">My About</h1>
+          <motion.h1 {...slideRight} className="pb-4">
+           My About
+
+          </motion.h1>
             <div className=" bg-yellow-400 w-14 h-[4px] rounded-full "></div>
           </div>
           <div className="gap-y-4 flex flex-col mt-3 ">
